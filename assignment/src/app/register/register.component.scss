@@ -1,0 +1,54 @@
+.mat-title {
+  color: gray;
+}
+
+body {
+  background-image: url(background.jpeg) ;
+  background-size: cover;
+  background-position:center;
+  height:720px;
+  margin: auto;
+
+  background-position: top center;
+  padding: 100px ;
+
+}
+
+.form {
+  text-align: center;
+}
+
+#everything{
+  margin: auto;
+  width: 100%;
+}
+
+input {
+  margin: 5px;
+  padding: 10px;
+}
+
+.input {
+  margin: 5px;
+  padding: 10px;
+}
+
+.btn:hover {
+  background-color: rgb(100, 204, 7);
+  color: black;
+}
+
+.btn {
+  text-align: center;
+  width: max-content;
+  margin: 5px;
+  padding: 10px 40px 10px 40px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
+mat-card{
+  margin: 0 auto ;
+  width: 30%;
+  text-align: center;
+}

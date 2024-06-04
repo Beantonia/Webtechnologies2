@@ -1,0 +1,83 @@
+<html>
+<body>
+
+
+
+<mat-toolbar >
+<mat-toolbar-row>
+
+  <button mat-raised-button routerLinkActive="active" routerLink="/list" class="actbtn" >Listázás</button>
+
+  <button mat-raised-button routerLinkActive="active" (click)=logout() class="actbtnn" >Kijelentkezés</button>
+
+</mat-toolbar-row>
+</mat-toolbar>
+  <p></p>
+
+
+  <p></p>
+<mat-card class="example-card">
+  <mat-panel-title class="mat-title"> Játék hozzáadása </mat-panel-title>
+
+    <form [formGroup]="createForm" (ngSubmit)="onSubmit()" class="form" >
+      <mat-form-field >
+        <input matInput type="text" placeholder="Játék neve" formControlName="name">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field >
+        <input matInput  placeholder="Játék azonosítója" type="text"  formControlName="gameID">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label>Szerző</mat-label>
+        <mat-select formControlName="author">
+          <mat-option value="GameWorld">GameWorld</mat-option>
+          <mat-option value="Fryxgames">Fryxgames</mat-option>
+          <mat-option value="Feuerland">Feuerland</mat-option>
+          <mat-option value="QueenGames">QueenGames</mat-option>
+          <mat-option value="ZmanGames">ZmanGames</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <mat-label>Gyártó</mat-label>
+        <mat-select formControlName="company">
+          <mat-option value="ReflexShop">ReflexShop</mat-option>
+          <mat-option value="RegioJatek">RegioJatek</mat-option>
+          <mat-option value="JátékShop">JátékShop</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field >
+        <input matInput  placeholder="Megjelenés időpontja" type="date" formControlName="releaseDate">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Leírás" formControlName="introduction" 
+                  cdkAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+      </mat-form-field>
+      <br>
+
+      <mat-form-field >
+        <input matInput  placeholder="Szériaszám" type="text"  formControlName="serieNumber">
+      </mat-form-field>
+      <br>
+
+      <mat-form-field >
+        <input matInput  placeholder="Mennyiség" type="text"  formControlName="amount">
+      </mat-form-field>
+      <br>
+
+      <button mat-raised-button type="submit"  class="btn" >Hozzáadás</button>
+
+    </form>
+
+  </mat-card>
+
+</body>
+</html>

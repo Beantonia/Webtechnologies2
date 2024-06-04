@@ -1,0 +1,75 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <mat-toolbar>
+    <mat-toolbar-row>
+
+      <button mat-raised-button routerLinkActive="active" routerLink="/add" class="actbtn">Hozzáadás</button>
+
+      <button mat-raised-button routerLinkActive="active" (click)=logout() class="actbtnn">Kijelentkezés</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-card class="example-card">
+    <mat-card-title>Játékok</mat-card-title>
+
+
+    <p></p>
+
+    <table class="mat-elevation-z8">
+      <thead>
+        <tr>
+          <th>Játék neve</th>
+          <th>Játék azonosítója</th>
+          <th>Szerző</th>
+          <th>Gyártó</th>
+          <th>Megjelenés dátuma</th>
+          <th>Leírás</th>
+          <th>Szériaszám</th>
+          <th>Darabszám</th>
+          <th>Törlés</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let game of Game; let i = index">
+        <td>{{game.name}}</td>
+        <td>{{game.gameID}}</td>
+        <td>{{game.author}}</td>
+        <td>{{game.company}}</td>
+        <td>{{game.releaseDate | date:'yyyy-MM-dd'}}</td>
+        <td>{{game.introduction}}</td>
+        <td>{{game.serieNumber}}</td>
+        <td>
+          <button mat-icon-button color="primary" (click)="decrementAmount(game)">
+            <mat-icon>remove</mat-icon>
+          </button>
+          {{game.amount}}
+          <button mat-icon-button color="primary" (click)="incrementAmount(game)">
+            <mat-icon>add</mat-icon>
+          </button>
+        </td>
+        <td>
+          <button mat-icon-button class="material-icons" color="warn" (click)="deleteGame(game._id, i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+
+  </mat-card>
+
+  <div class="chart-container" style="display: block;">
+    <canvas baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            [colors]="pieChartColors"
+            [options]="pieChartOptions">
+    </canvas>
+  </div>
+
+</body>
+
+</html>

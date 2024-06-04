@@ -1,0 +1,87 @@
+mat-panel-title {
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: left;
+  color: white;
+}
+
+body {
+
+  background-image: url(background.jpeg) ;
+  background-size: cover;
+  background-position:center;
+  height:720px;
+  margin: auto;
+  padding: 100px ;
+}
+
+#everything{
+  margin: auto;
+  width: 100%;
+}
+
+.form {
+  text-align: center;
+}
+
+input {
+  margin: 5px;
+  padding: 10px;
+  border:gray;
+  border-radius: 4px;
+}
+
+.input {
+  margin: 5px;
+  padding: 10px;
+  color:yellow;
+}
+
+.btn:hover {
+  background-color: rgb(100, 204, 7);
+  color: black;
+}
+
+.btn {
+  text-align: center;
+  width: max-content;
+  margin: 5px;
+  padding: 10px 40px 10px 40px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
+
+::ng-deep .mat-focused .mat-form-field-label {
+  color: green !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  background-color: green !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  background-color: green !important;;
+}
+
+::ng-deep input.mat-input-element {
+  color: green;
+}
+:host::ng-deep .mat-select-placeholder {
+  color: red;
+}
+
+::-webkit-input-placeholder { 
+  color: red;
+}
+
+.mat-focused .placeholder {
+  color: #00D318;
+}
+
+mat-card{
+  margin: 0 auto;
+  width: 30%;
+  text-align: center;
+}
+
+
